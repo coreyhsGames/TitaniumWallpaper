@@ -2,6 +2,7 @@ const musicPlaying = document.querySelector('.music-player');
 const songIcon = document.querySelector('.song-icon');
 const headerArtist = document.getElementById('song-artist');
 const headerTitle = document.getElementById('song-name');
+const headerAlbum = document.getElementById('song-album');
 
 var numberOfFrequencies = 1;
 var spectrumScale = 1;
@@ -12,6 +13,7 @@ async function livelyCurrentTrack(data) {
     if (obj != null) {
         headerTitle.innerText = obj.Title;
         headerArtist.innerText = obj.Artist;
+        headerAlbum.innerText = obj.AlbumTitle;
 
         songIcon.src = "data:image/png;base64, " + obj.Thumbnail;
 
