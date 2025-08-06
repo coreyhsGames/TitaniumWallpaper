@@ -62,7 +62,6 @@ async function fetchCurrentWeather() {
         const { description, icon } = getWeatherDescriptionAndIcon(weatherCode, window.config.animatedWeatherIcons);
 
         weatherIcon.innerHTML = `<img src="${icon}" alt="${description}">`;
-        weatherIcon.title = description;
     } else {
         document.getElementById('current-weather-widget').innerHTML = `<p>Error fetching weather data. Please try again later.</p>`;
     }
